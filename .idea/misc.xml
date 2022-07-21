@@ -4,10 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/drawable/ic_arrow_back.xml" value="0.1" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.1" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/drawable/ic_favorite_border_24.xml" value="0.1" />
         <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/activity_spalsh.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/cmp_media_details_bottom_poster_card.xml" value="0.22" />
         <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/fragment_movie_detail.xml" value="0.16" />
         <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/now_playing_item.xml" value="0.33" />
+        <entry key="..\:/Users/julia/AndroidStudioProjects/AxMovies/app/src/main/res/layout/watch_card_item.xml" value="0.17074275362318841" />
       </map>
     </option>
   </component>

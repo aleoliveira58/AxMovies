@@ -8,8 +8,9 @@ import com.example.axmovies.utils.Command
 import com.example.axmovies.utils.ResponseApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-
-open class BaseViewModel : ViewModel() {
+//AndroidViewModel tem que usar para acessar o banco de dados no repository
+// Se não tiver banco de dados pode usar so ViewModel
+open class BaseViewModel(application : Application) : AndroidViewModel(application) {
 
     lateinit var command: MutableLiveData<Command>
 

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.axmovies">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,14 +16,18 @@
         android:theme="@style/Theme.AxMovies"
         tools:targetApi="31">
         <activity
-            android:name=".features.MainActivity"
-            android:exported="true">
+            android:name=".features.SplashActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".features.MainActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

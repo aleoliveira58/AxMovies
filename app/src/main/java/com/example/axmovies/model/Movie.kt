@@ -1,11 +1,13 @@
 package com.example.axmovies.model
 
 data class Movie(
+    var year: String? = "",
     val adult: Boolean,
-    val backdrop_path: String,
+    var backdrop_path: String? = null,
     val belongs_to_collection: Any,
     val budget: Int,
-    val genres: List<Genre>,
+    val genreIds: List<Int> = listOf(),
+    var genres: String? = "",
     val homepage: String,
     val id: Int,
     val imdb_id: String,
@@ -13,7 +15,7 @@ data class Movie(
     val original_title: String,
     val overview: String,
     val popularity: Double,
-    val poster_path: String,
+    var poster_path: String? = null,
     val production_companies: List<ProductionCompany>,
     val production_countries: List<ProductionCountry>,
     val release_date: String,

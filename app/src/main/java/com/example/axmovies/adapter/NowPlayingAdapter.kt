@@ -3,16 +3,17 @@ package com.example.axmovies.adapter
 import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
 import com.example.axmovies.R
 import com.example.axmovies.databinding.NowPlayingItemBinding
 import com.example.axmovies.model.Result
 
 class NowPlayingAdapter (
-    private val nowPlayingList: List<Result>,
     private val onClickListener: (movie: Result) -> Unit
-) : RecyclerView.Adapter<NowPlayingAdapter.NowPlayingViewHolder>(){
+) : PagedListAdapter<Result,NowPlayingAdapter.NowPlayingViewHolder>(Result.DIFF_CALLBACK){
 
 
     class NowPlayingViewHolder(
@@ -20,24 +21,24 @@ class NowPlayingAdapter (
     ): RecyclerView.ViewHolder(binding.root){
 
         fun bind(
-            movie : Result,
+            movie : Result?,
             onClickListener: (movie: Result) -> Unit
         ){
             with(binding){
-                tvWatchTitle.text = movie.title
-                tvWatchYear.text = movie.release_date
-                cvNowPlayingItem.setOnClickListener {
-                    onClickListener(movie)
+                movie?.let {
+
+                    tvWatchTitle.text = movie.title
+                    tvWatchYear.text = movie.release_date
+                    textView.setOnClickListener {
+                        onClickListener(movie)
+                    }
+                    Glide
+                        .with(itemView.context)
+                        .load(movie.poster_path)
+                        .placeholder(R.drawable.no_image_available)
+                        .into(ivWatchImage)
                 }
-                Glide
-                    .with(itemView.context)
-                    .load(movie.poster_path)
-                    .placeholder(R.drawable.no_image_available)
-                    .into(ivWatchImage)
-
-
             }
-
         }
     }
 
@@ -49,10 +50,10 @@ class NowPlayingAdapter (
     }
 
     override fun onBindViewHolder(holder: NowPlayingViewHolder, position: Int) {
-        holder.bind(nowPlayingList[position], onClickListener)
+        holder.bind(getItem(position), onClickListener)
     }
 
-    override fun getItemCount() = nowPlayingList.size
+
 
 
 
